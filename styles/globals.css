@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .hoverEffect{
+        @apply hover:bg-gray-200
+                
+                cursor-pointer
+                w-[52px] rounded-full hover:justify-center
+                h-[52px] hover:sm:justify-start
+                 md:w-auto md:h-auto
+                 
+
+        
+    }
+}
