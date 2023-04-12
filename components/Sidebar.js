@@ -29,12 +29,12 @@ export default function Sidebar() {
           <SidebarMenuItem text="UserIcon" Icon={CgProfile} />
           <SidebarMenuItem text="More" Icon={CgMoreO} />
           {/*Button */}
-      <button className='bg-blue-400 my-3 hover:brightness-95 shadow-md font-bold w-56 h-12 text-white rounded-full'>Tweet</button>
+      <button   className='bg-blue-400 hidden sm:inline my-3 hover:brightness-95 shadow-md font-bold w-56 h-12 text-white rounded-full'>Tweet</button>
 
            {/*Mini Profile */}
            <div className='hoverEffect flex items-center mt-7'>
            <img className='h-10 w-10 rounded-full' src="https://media.istockphoto.com/id/544358212/photo/happy-laughing-man.jpg?b=1&s=170667a&w=0&k=20&c=M5crkeYnUB_8nXu9a_VuvyLoGV6RuHyUC9qMaERGPsM=" alt="image" />
-           <div className='leading-5'>
+           <div className='leading-5 hidden sm:inline'>
             <h4 className='font-bold'>Goran Kostic</h4>
             <p className='text-gray-500'>@codewithsahand</p>
 
