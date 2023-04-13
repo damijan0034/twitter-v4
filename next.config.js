@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['www.uwindsor.ca','link.pixabay.com'],
+    domains: ['www.uwindsor.ca','link.pixabay.com','media.istockphoto.com'],
   }
 
 }
