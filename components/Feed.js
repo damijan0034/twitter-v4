@@ -1,6 +1,7 @@
 import React from 'react'
 import {IoSparklesSharp} from 'react-icons/io'
 import { HiSparkles } from 'react-icons/hi'
+import Input from './Input'
 
 export default function Feed() {
   return (
@@ -11,6 +12,8 @@ export default function Feed() {
          <HiSparkles className='h-5 w-5 sm:w-6 sm:h-6' /> 
         </div>
       </div>
+
+      <Input />
     </div>
   )
 }
