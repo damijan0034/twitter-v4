@@ -42,7 +42,7 @@ export default function Post({post}) {
         
         <div className='flex space-x-2 text-gray-500 p-2'>
             <BsChatDots className='hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100' />
-            <BsTrash3 className='hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100'/>
+            <BsTrash3 className='hoverEffect p-2 hover:text-red-500 hover:bg-red-100'/>
             <AiOutlineHeart className='hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100'/>
             <FiShare2 className='hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100'/>
             <HiOutlineChartBar className='hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100'/>
