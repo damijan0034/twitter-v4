@@ -8,7 +8,7 @@ import Widgets from '@/components/Widgets'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({allNews}) {
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=' flex max-w-6xl mx-auto min-h-screen'>
+      <main className=' flex  mx-auto min-h-screen'>
         {/*SideBar*/ }
         <Sidebar  />
 
@@ -25,8 +25,18 @@ export default function Home() {
         <Feed />
         
         {/*Widgets*/ }
-        <Widgets />
+        
+        <Widgets articles={allNews.articles} />
       </main>
     </>
   )
+}
+
+export async function getServerSideProps(){
+  const res=await fetch("https://saurav.tech/NewsAPI/top-headlines/category/business/us.json")
+  const data= await res.json()
+
+  return{
+    props:{allNews:data}
+  }
 }
