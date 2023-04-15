@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { ImSearch } from "react-icons/im";
 import News from "./News";
+import User from "./User";
 
-export default function Widgets({ articles }) {
+export default function Widgets({ articles,randomUserResults }) {
     const[articleNum,setArticleNum]=useState(3)
+    const[randomUser,setRandomUser]=useState(3)
+
   return (
     <div className="hidden  bg-white md:inline-block ml-8 space-y-5">
       <div className=" md:w-64 py-1.5     bg-white z-50 sticky top-0">
@@ -27,6 +30,18 @@ export default function Widgets({ articles }) {
           );
         })}
         <button onClick={()=>{setArticleNum(articleNum + 3)}} className="text-blue-300 pl-4 pb-3 hover:text-blue-400" type="">Show More</button>
+      </div>
+
+      <div className="text-gray-700 w-[90%] space-y-3 p-2 rounded-xl bg-gray-100">
+        <h4 className="font-bold text-xl px-2">Who to Fallow</h4>
+        {randomUserResults.slice(0,randomUser).map((user) => {
+          return (
+            <div>
+              <User key={user.login.username} user={user} />
+            </div>
+          );
+        })}
+        <button onClick={()=>{setRandomUser(randomUser + 3)}} className="text-blue-300 pl-4 pb-3 hover:text-blue-400" type="">Show More</button>
       </div>
     </div>
   );
