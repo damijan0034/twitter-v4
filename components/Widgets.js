@@ -33,7 +33,7 @@ export default function Widgets({ articles,randomUserResults }) {
       </div>
 
       <div className="text-gray-700 w-[90%] space-y-3 p-2 rounded-xl bg-gray-100">
-        <h4 className="font-bold text-xl px-2">Who to Fallow</h4>
+        <h4 className="font-bold  text-xl px-2">Who to Fallow</h4>
         {randomUserResults.slice(0,randomUser).map((user) => {
           return (
             <div>
